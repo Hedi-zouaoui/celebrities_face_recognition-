@@ -30,7 +30,7 @@ app.get('/' , (req , res) => {
 
 app.post('/signin' , (req , res) => {
   db.select('email' , 'hash').from('login')
-  .where('email' , '=' , req.body.mail )
+  .where('email', '=' , req.body.mail )
   .then(data => {
     const isValid = bcrypt.compareSync(req.body.password, data[0].hash) ; 
      
