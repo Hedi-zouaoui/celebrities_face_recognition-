@@ -57,7 +57,7 @@ app.post('/register' , (req , res ) => {
 const hash = bcrypt.hashSync(password) ; 
 db.transaction(trx => {
     trx.insert({
-        hash: hash ,
+        hash: hash  ,
         email: mail
     })
     .into('login')
