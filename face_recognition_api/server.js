@@ -41,7 +41,7 @@ app.post('/signin' , (req , res) => {
         .then(user => {
             res.json(user[0])
         })
-        .catch(err => res.status(400).json('enable to get user '))
+        .catch(err => res.status(400).json('enable to get user'))
     } else {
           console.log(isValid)
         res.status(400).json('wrong credentials')
