@@ -37,7 +37,7 @@ app.post('/signin' , (req , res) => {
     if(isValid) {
         console.log(isValid)
         return db.select('*').from('users')
-        .where ('email' , '=' , req.body.mail)
+        .where ('email', '=' , req.body.mail)
         .then(user => {
             res.json(user[0])
         })
